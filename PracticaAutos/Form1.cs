@@ -21,6 +21,7 @@ namespace PracticaAutos
         {
             string auto = cmb_TipoAuto.SelectedItem.ToString();
             MessageBox.Show(auto.ToString());
+            auto.to
             int atipo = 0;
             
             switch (auto)
