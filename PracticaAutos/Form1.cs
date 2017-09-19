@@ -19,54 +19,38 @@ namespace PracticaAutos
 
         private void btn_FabricarAuto_Click(object sender, EventArgs e)
         {
-            string auto = cmb_TipoAuto.SelectedItem.ToString();
-            MessageBox.Show(auto.ToString());
-            auto.to
-            int atipo = 0;
-            
-            switch (auto)
+            //If de validacion de checkbox
+            if (cbx_AConv.Checked == true)
             {
-                case 1:
-                    {
-                        Convencionales c = new Convencionales();
-                        c.NPuertas();
-                        c.NLlantas();
-                        c.Potencia();
-                        break;
-                    }
-                case 2:
-                    {
-                        DeLujo l = new DeLujo();
-                        l.DNPuertas();
-                        l.DNLlantas();
-                        l.DPotencia();
-                        break;
-                    }
-                case 3:
-                    {
-                        DeLujo l = new DeLujo();
-                        Formula1 f = (Formula1)l;
-                        f.DNPuertas();
-                        f.DNLlantas();
-                        f.DPotencia();
-                        break;
-                    }
+                //Inicializacion de clase Convencionales
+                Convencionales c = new Convencionales();
+                //Llamado a metodo NPuertas de la clase Convencionales
+                c.NPuertas();
+                MessageBox.Show("XD");
             }
         }
     }
+    //Clase abstracta GenericMethod
     abstract class GenericMethod
     {
+        //Declaracion de metodos abstractos
         public abstract void NPuertas();
         public abstract void NLlantas();
         public abstract void Potencia();
     }
+    //Clase Convencionales, que hereda de GenericMethod
     class Convencionales : GenericMethod
     {
+        //Inicializacion de la forma 1
         Form1 fm = new Form1();
+        //Llamado de metodo NPuertas 
         public override void NPuertas()
-        {            
+        {
+            //Declaracion de variable de texto
             string puertas = "2 a 4 puertas";
+            //Manipulacion del texto de label, desde forma 1
             fm.lbl_RPuertas.Text = puertas.ToString();
+            MessageBox.Show("Hola");
         }
         public override void NLlantas()
         {
@@ -76,44 +60,6 @@ namespace PracticaAutos
         public override void Potencia()
         {
             string potencia = "De 90 a 110 caballos de fuerza";
-            fm.lbl_RPotencia.Text = potencia.ToString();
-        }
-    }
-    class DeLujo : Convencionales
-    {
-        Form1 fm = new Form1();
-        public virtual void DNPuertas()
-        {
-            string puertas = "2 puertas";
-            fm.lbl_RPuertas.Text = puertas.ToString();
-        }
-        public virtual void DNLlantas()
-        {
-            string llantas = "Llantas reforzadas";
-            fm.lbl_RLlantas.Text = llantas.ToString();
-        }
-        public virtual void DPotencia()
-        {
-            string potencia = "De 110 a 250 caballos de fuerza";
-            fm.lbl_RPotencia.Text = potencia.ToString();
-        }
-    }
-    class Formula1 : DeLujo
-    {
-        Form1 fm = new Form1();
-        public override void DNPuertas()
-        {
-            string puertas = "Sin puertas";
-            fm.lbl_RPuertas.Text = puertas.ToString();
-        }
-        public override void DNLlantas()
-        {
-            string llantas = "Llantas de alto rendimiento";
-            fm.lbl_RLlantas.Text = llantas.ToString();
-        }
-        public override void DPotencia()
-        {
-            string potencia = "De 600 a 750 caballos de fuerza";
             fm.lbl_RPotencia.Text = potencia.ToString();
         }
     }
