@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnl_PanleBack = new System.Windows.Forms.Panel();
+            this.gbx_Radiobtn = new System.Windows.Forms.GroupBox();
+            this.rdb_Moto = new System.Windows.Forms.RadioButton();
+            this.rdb_AFor1 = new System.Windows.Forms.RadioButton();
+            this.rdb_ALujo = new System.Windows.Forms.RadioButton();
+            this.rdb_AConv = new System.Windows.Forms.RadioButton();
             this.lbl_RPotencia = new System.Windows.Forms.Label();
             this.lbl_RLlantas = new System.Windows.Forms.Label();
             this.lbl_RPuertas = new System.Windows.Forms.Label();
@@ -36,17 +41,13 @@
             this.lbl_Llantas = new System.Windows.Forms.Label();
             this.lbl_Puertas = new System.Windows.Forms.Label();
             this.btn_FabricarAuto = new System.Windows.Forms.Button();
-            this.cbx_AConv = new System.Windows.Forms.CheckBox();
-            this.cbx_ALuj = new System.Windows.Forms.CheckBox();
-            this.cbx_AFor1 = new System.Windows.Forms.CheckBox();
             this.pnl_PanleBack.SuspendLayout();
+            this.gbx_Radiobtn.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_PanleBack
             // 
-            this.pnl_PanleBack.Controls.Add(this.cbx_AFor1);
-            this.pnl_PanleBack.Controls.Add(this.cbx_ALuj);
-            this.pnl_PanleBack.Controls.Add(this.cbx_AConv);
+            this.pnl_PanleBack.Controls.Add(this.gbx_Radiobtn);
             this.pnl_PanleBack.Controls.Add(this.lbl_RPotencia);
             this.pnl_PanleBack.Controls.Add(this.lbl_RLlantas);
             this.pnl_PanleBack.Controls.Add(this.lbl_RPuertas);
@@ -57,13 +58,69 @@
             this.pnl_PanleBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_PanleBack.Location = new System.Drawing.Point(0, 0);
             this.pnl_PanleBack.Name = "pnl_PanleBack";
-            this.pnl_PanleBack.Size = new System.Drawing.Size(339, 297);
+            this.pnl_PanleBack.Size = new System.Drawing.Size(501, 439);
             this.pnl_PanleBack.TabIndex = 0;
+            // 
+            // gbx_Radiobtn
+            // 
+            this.gbx_Radiobtn.Controls.Add(this.rdb_Moto);
+            this.gbx_Radiobtn.Controls.Add(this.rdb_AFor1);
+            this.gbx_Radiobtn.Controls.Add(this.rdb_ALujo);
+            this.gbx_Radiobtn.Controls.Add(this.rdb_AConv);
+            this.gbx_Radiobtn.Location = new System.Drawing.Point(12, 39);
+            this.gbx_Radiobtn.Name = "gbx_Radiobtn";
+            this.gbx_Radiobtn.Size = new System.Drawing.Size(475, 77);
+            this.gbx_Radiobtn.TabIndex = 11;
+            this.gbx_Radiobtn.TabStop = false;
+            // 
+            // rdb_Moto
+            // 
+            this.rdb_Moto.AutoSize = true;
+            this.rdb_Moto.Location = new System.Drawing.Point(343, 33);
+            this.rdb_Moto.Name = "rdb_Moto";
+            this.rdb_Moto.Size = new System.Drawing.Size(80, 17);
+            this.rdb_Moto.TabIndex = 3;
+            this.rdb_Moto.TabStop = true;
+            this.rdb_Moto.Text = "Motocicleta";
+            this.rdb_Moto.UseVisualStyleBackColor = true;
+            // 
+            // rdb_AFor1
+            // 
+            this.rdb_AFor1.AutoSize = true;
+            this.rdb_AFor1.Location = new System.Drawing.Point(231, 33);
+            this.rdb_AFor1.Name = "rdb_AFor1";
+            this.rdb_AFor1.Size = new System.Drawing.Size(93, 17);
+            this.rdb_AFor1.TabIndex = 2;
+            this.rdb_AFor1.TabStop = true;
+            this.rdb_AFor1.Text = "Auto Formula1";
+            this.rdb_AFor1.UseVisualStyleBackColor = true;
+            // 
+            // rdb_ALujo
+            // 
+            this.rdb_ALujo.AutoSize = true;
+            this.rdb_ALujo.Location = new System.Drawing.Point(135, 33);
+            this.rdb_ALujo.Name = "rdb_ALujo";
+            this.rdb_ALujo.Size = new System.Drawing.Size(85, 17);
+            this.rdb_ALujo.TabIndex = 1;
+            this.rdb_ALujo.TabStop = true;
+            this.rdb_ALujo.Text = "Auto de Lujo";
+            this.rdb_ALujo.UseVisualStyleBackColor = true;
+            // 
+            // rdb_AConv
+            // 
+            this.rdb_AConv.AutoSize = true;
+            this.rdb_AConv.Location = new System.Drawing.Point(6, 33);
+            this.rdb_AConv.Name = "rdb_AConv";
+            this.rdb_AConv.Size = new System.Drawing.Size(115, 17);
+            this.rdb_AConv.TabIndex = 0;
+            this.rdb_AConv.TabStop = true;
+            this.rdb_AConv.Text = "Auto Convencional";
+            this.rdb_AConv.UseVisualStyleBackColor = true;
             // 
             // lbl_RPotencia
             // 
             this.lbl_RPotencia.AutoSize = true;
-            this.lbl_RPotencia.Location = new System.Drawing.Point(241, 201);
+            this.lbl_RPotencia.Location = new System.Drawing.Point(314, 321);
             this.lbl_RPotencia.Name = "lbl_RPotencia";
             this.lbl_RPotencia.Size = new System.Drawing.Size(58, 13);
             this.lbl_RPotencia.TabIndex = 7;
@@ -72,7 +129,7 @@
             // lbl_RLlantas
             // 
             this.lbl_RLlantas.AutoSize = true;
-            this.lbl_RLlantas.Location = new System.Drawing.Point(132, 201);
+            this.lbl_RLlantas.Location = new System.Drawing.Point(205, 321);
             this.lbl_RLlantas.Name = "lbl_RLlantas";
             this.lbl_RLlantas.Size = new System.Drawing.Size(58, 13);
             this.lbl_RLlantas.TabIndex = 6;
@@ -81,7 +138,7 @@
             // lbl_RPuertas
             // 
             this.lbl_RPuertas.AutoSize = true;
-            this.lbl_RPuertas.Location = new System.Drawing.Point(29, 201);
+            this.lbl_RPuertas.Location = new System.Drawing.Point(102, 321);
             this.lbl_RPuertas.Name = "lbl_RPuertas";
             this.lbl_RPuertas.Size = new System.Drawing.Size(58, 13);
             this.lbl_RPuertas.TabIndex = 5;
@@ -90,7 +147,7 @@
             // lbl_Potencia
             // 
             this.lbl_Potencia.AutoSize = true;
-            this.lbl_Potencia.Location = new System.Drawing.Point(241, 157);
+            this.lbl_Potencia.Location = new System.Drawing.Point(314, 277);
             this.lbl_Potencia.Name = "lbl_Potencia";
             this.lbl_Potencia.Size = new System.Drawing.Size(49, 13);
             this.lbl_Potencia.TabIndex = 4;
@@ -99,7 +156,7 @@
             // lbl_Llantas
             // 
             this.lbl_Llantas.AutoSize = true;
-            this.lbl_Llantas.Location = new System.Drawing.Point(132, 157);
+            this.lbl_Llantas.Location = new System.Drawing.Point(205, 277);
             this.lbl_Llantas.Name = "lbl_Llantas";
             this.lbl_Llantas.Size = new System.Drawing.Size(41, 13);
             this.lbl_Llantas.TabIndex = 3;
@@ -108,7 +165,7 @@
             // lbl_Puertas
             // 
             this.lbl_Puertas.AutoSize = true;
-            this.lbl_Puertas.Location = new System.Drawing.Point(29, 157);
+            this.lbl_Puertas.Location = new System.Drawing.Point(102, 277);
             this.lbl_Puertas.Name = "lbl_Puertas";
             this.lbl_Puertas.Size = new System.Drawing.Size(98, 13);
             this.lbl_Puertas.TabIndex = 2;
@@ -116,54 +173,26 @@
             // 
             // btn_FabricarAuto
             // 
-            this.btn_FabricarAuto.Location = new System.Drawing.Point(107, 88);
+            this.btn_FabricarAuto.Location = new System.Drawing.Point(159, 140);
             this.btn_FabricarAuto.Name = "btn_FabricarAuto";
-            this.btn_FabricarAuto.Size = new System.Drawing.Size(121, 23);
+            this.btn_FabricarAuto.Size = new System.Drawing.Size(152, 56);
             this.btn_FabricarAuto.TabIndex = 1;
             this.btn_FabricarAuto.Text = "Fabricar Auto";
             this.btn_FabricarAuto.UseVisualStyleBackColor = true;
             this.btn_FabricarAuto.Click += new System.EventHandler(this.btn_FabricarAuto_Click);
             // 
-            // cbx_AConv
-            // 
-            this.cbx_AConv.AutoSize = true;
-            this.cbx_AConv.Location = new System.Drawing.Point(12, 34);
-            this.cbx_AConv.Name = "cbx_AConv";
-            this.cbx_AConv.Size = new System.Drawing.Size(116, 17);
-            this.cbx_AConv.TabIndex = 8;
-            this.cbx_AConv.Text = "Auto Convencional";
-            this.cbx_AConv.UseVisualStyleBackColor = true;
-            // 
-            // cbx_ALuj
-            // 
-            this.cbx_ALuj.AutoSize = true;
-            this.cbx_ALuj.Location = new System.Drawing.Point(135, 34);
-            this.cbx_ALuj.Name = "cbx_ALuj";
-            this.cbx_ALuj.Size = new System.Drawing.Size(89, 17);
-            this.cbx_ALuj.TabIndex = 9;
-            this.cbx_ALuj.Text = "Auto  de Lujo";
-            this.cbx_ALuj.UseVisualStyleBackColor = true;
-            // 
-            // cbx_AFor1
-            // 
-            this.cbx_AFor1.AutoSize = true;
-            this.cbx_AFor1.Location = new System.Drawing.Point(229, 34);
-            this.cbx_AFor1.Name = "cbx_AFor1";
-            this.cbx_AFor1.Size = new System.Drawing.Size(94, 17);
-            this.cbx_AFor1.TabIndex = 10;
-            this.cbx_AFor1.Text = "Auto Formula1";
-            this.cbx_AFor1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 297);
+            this.ClientSize = new System.Drawing.Size(501, 439);
             this.Controls.Add(this.pnl_PanleBack);
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnl_PanleBack.ResumeLayout(false);
             this.pnl_PanleBack.PerformLayout();
+            this.gbx_Radiobtn.ResumeLayout(false);
+            this.gbx_Radiobtn.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -178,9 +207,11 @@
         public System.Windows.Forms.Label lbl_RPuertas;
         public System.Windows.Forms.Label lbl_RPotencia;
         public System.Windows.Forms.Label lbl_RLlantas;
-        private System.Windows.Forms.CheckBox cbx_AFor1;
-        private System.Windows.Forms.CheckBox cbx_ALuj;
-        private System.Windows.Forms.CheckBox cbx_AConv;
+        private System.Windows.Forms.GroupBox gbx_Radiobtn;
+        private System.Windows.Forms.RadioButton rdb_Moto;
+        private System.Windows.Forms.RadioButton rdb_AFor1;
+        private System.Windows.Forms.RadioButton rdb_ALujo;
+        private System.Windows.Forms.RadioButton rdb_AConv;
     }
 }
 
